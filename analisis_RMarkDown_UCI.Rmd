@@ -1,0 +1,80 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+---
+title: "UCI.Estudio Multic?ntrico"
+author: "Ramon Puig "
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+rm(list=ls())
+library("data.table")
+library("SNPassoc")
+library("htmlwidgets")
+library("compareGroups")
+library("foreign")
+library("lattice")
+library("Hmisc")
+library("ggplot2")
+library("pander")
+library("readxl")
+library("rmarkdown")
+library("knitr")
+library("data.table")
+library("MatchIt")
+library("survival")
+library("plyr")
+library("dplyr")
+library("survminer")
+library("purrr")
+library("stringr")
+library("tidyverse")
+library("tidyr")
+library("purrr")
+library(data.table)
+library(foreign)
+library(dplyr)
+library(lattice)
+library(SNPassoc)
+library(haplo.stats)
+library(mvtnorm)
+library(parallel)
+```
+
+
+
+
+```{r, message=FALSE, warning=FALSE, include=T, echo=FALSE,size="huge"}
+####  Llegir dades    #####
+
+#C:\Users\Suta\Desktop\hospital2
+
+setwd("C:/Users/Suta/Desktop/hospital2")
+
+#setwd("C:/Users/Suta/Desktop/4.3.2019")
+#setwd("C:/Users/38122893W/Desktop/hospital2")
+
+load("UCI.Rdata")
+
+#Taula00
+export2md(T00,caption="Taula1")
+#Taula0
+export2md(T0,caption="Taula2")
+#Taula1
+export2md(T1,caption="Taula3")
+#Taula2
+export2md(T2,caption="Taula4")
+
+
+
+```
+
+
